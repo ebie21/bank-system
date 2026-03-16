@@ -21,4 +21,8 @@ public class Bank {
         }
         return null;
     }
+
+    public List<Account> getAllAccounts() {
+      return accounts;
+    }
 }

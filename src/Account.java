@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Account implements List<Account> {
+public class Account  {
 
     private String accountNumber;
     private String accountHolderName;
