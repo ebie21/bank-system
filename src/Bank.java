@@ -23,6 +23,16 @@ public class Bank {
     }
 
     public List<Account> getAllAccounts() {
-      return accounts;
+        return accounts;
+    }
+
+    public Account deleteAccount(String accountNumber) {
+        for (Account account : accounts) {
+            if (account.getAccountNumber().equals(accountNumber)) {
+                accounts.remove(account);
+                return account;
+            }
+        }
+        throw new IllegalArgumentException("Account not found" + accountNumber);
     }
 }

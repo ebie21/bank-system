@@ -24,5 +24,9 @@ public class Main {
         System.out.println("Found: " +findAccount);
 
 
+        System.out.println("Account number: " + bank.deleteAccount("002")
+                .getAccountNumber()
+        +" Has been deleted");
+
     }
 }
