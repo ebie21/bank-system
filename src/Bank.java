@@ -35,4 +35,24 @@ public class Bank {
         }
         throw new IllegalArgumentException("Account not found" + accountNumber);
     }
+
+    public Account deposit(String accountNumber, double amount) {
+        for (Account account : accounts) {
+            if (account.getAccountNumber().equals(accountNumber)) {
+                account.deposit(amount);
+                return account;
+            }
+        }
+        throw new IllegalArgumentException("Account not found" + accountNumber);
+    }
+
+    public Account withdraw(String accountNumber, double amount) {
+        for (Account account : accounts) {
+            if (account.getAccountNumber().equals(accountNumber)) {
+                account.withdraw(amount);
+                return account;
+            }
+        }
+        throw new IllegalArgumentException("Account not found" + accountNumber);
+    }
 }

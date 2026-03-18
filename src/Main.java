@@ -28,5 +28,7 @@ public class Main {
                 .getAccountNumber()
         +" Has been deleted");
 
+        System.out.println( bank.deposit("001",50000).toString());
+        System.out.println(bank.withdraw("001",7000).toString());
     }
 }
