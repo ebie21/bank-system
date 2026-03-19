@@ -46,13 +46,13 @@ public class Bank {
         throw new IllegalArgumentException("Account not found" + accountNumber);
     }
 
-    public Account withdraw(String accountNumber, double amount) {
+    public Account withdraw(String accountNumber, double amount) throws InsufficientFundsException {
         for (Account account : accounts) {
             if (account.getAccountNumber().equals(accountNumber)) {
                 account.withdraw(amount);
                 return account;
             }
         }
-        throw new IllegalArgumentException("Account not found" + accountNumber);
+        throw new InsufficientFundsException("Account not found: " + accountNumber);
     }
 }

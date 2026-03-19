@@ -46,9 +46,9 @@ public class Account  {
         return balance += amount;
     }
 
-    public double withdraw(double amount) {
+    public double withdraw(double amount) throws InsufficientFundsException {
         if (amount <= 0  || amount > balance) {
-            throw new IllegalArgumentException("Insufficient funds. Amount exceeds Balance!!");
+           throw new InsufficientFundsException("Insufficient Funds. Balance" + balance + ", Attempted: " + amount);
         }
 
        return balance -= amount;
