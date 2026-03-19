@@ -1,10 +1,11 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) throws InsufficientFundsException {
+    public static void main(String[] args) throws InsufficientFundsException, IOException {
         List<Account> accounts = new ArrayList<>();
 
         Bank bank = new Bank();
@@ -37,6 +38,9 @@ public class Main {
         CheckingAccount ca = new CheckingAccount("005","John Doe",5000,0.05);
         System.out.println(ca);
 
-        System.out.println(bank.withdraw("001", 66500));
+//        System.out.println(bank.withdraw("001", 66500));
+
+        BankStorage bankStorage = new BankStorage();
+        bankStorage.saveAccount(bank.getAllAccounts(), "accounts.txt");
     }
 }
