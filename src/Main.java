@@ -30,5 +30,11 @@ public class Main {
 
         System.out.println( bank.deposit("001",50000).toString());
         System.out.println(bank.withdraw("001",7000).toString());
+
+        SavingsAccount sa = new SavingsAccount("004","Bob Marley",1000,0.05);
+        System.out.println(sa);
+
+        CheckingAccount ca = new CheckingAccount("005","John Doe",5000,0.05);
+        System.out.println(ca);
     }
 }
