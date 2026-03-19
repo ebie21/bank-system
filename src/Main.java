@@ -42,5 +42,10 @@ public class Main {
 
         BankStorage bankStorage = new BankStorage();
         bankStorage.saveAccount(bank.getAllAccounts(), "accounts.txt");
+
+        List<String> loaded = bankStorage.loadAccounts("accounts.txt");
+        for(String s : loaded) {
+            System.out.println(s);
+        }
     }
 }
