@@ -1,4 +1,4 @@
-public class CheckingAccount extends Account{
+public class CheckingAccount extends Account implements Transactional{
     private  double overdraftLimit;
 
     public CheckingAccount(String accountNumber, String accountHolderName, double balance,double overdraftLimit) {

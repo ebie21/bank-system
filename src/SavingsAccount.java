@@ -1,4 +1,4 @@
-public class SavingsAccount extends Account {
+public class SavingsAccount extends Account implements Transactional {
      private double interestRate;
 
     public SavingsAccount(String accountNumber, String accountHolderName, double balance, double interestRate) {
