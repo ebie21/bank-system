@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+This class manages all bank accounts.
+It handles adding, finding, deleting,
+depositing and withdrawing.
+*/
 public class Bank {
 
     private List<Account> accounts;
@@ -53,6 +58,6 @@ public class Bank {
                 return account;
             }
         }
-        throw new InsufficientFundsException("Account not found: " + accountNumber);
+        throw new IllegalArgumentException("Account not found: " + accountNumber);
     }
 }

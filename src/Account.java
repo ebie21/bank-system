@@ -1,5 +1,9 @@
 import java.util.List;
-
+/*
+This is a class that is a blueprint for all
+ accounts that is created and need to be
+ created.
+ */
 public class Account  {
 
     private String accountNumber;
