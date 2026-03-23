@@ -68,7 +68,9 @@ public class Main {
                   Account newAmount = bank.withdraw(accountNumber3, amount3);
                   System.out.println(newAmount);
                   break;
-
+              default:
+                  System.out.println("Invalid choice");
+                  break;
             }
         }while (choice != 7);
 
