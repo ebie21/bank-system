@@ -15,12 +15,13 @@ public class Main {
         do {
             System.out.println("Welcome to Bank System");
             System.out.println("1. Create Account");
-            System.out.println("2. View all Accounts");
+            System.out.println("2. View all Accounts ");
             System.out.println("3. Find Account");
             System.out.println("4. Delete Account");
             System.out.println("5. Deposit");
             System.out.println("6. Withdraw");
-            System.out.println("7. Exit");
+            System.out.println("7. View accounts over R5000");
+            System.out.println("8. Exit");
 
             System.out.print("Enter your choice: ");
             choice = input.nextInt();
@@ -38,9 +39,8 @@ public class Main {
                     bank.addAccount(account);
                     break;
                 case 2:
-                  for (Account acc : bank.getAllAccounts()) {
-                      System.out.println(acc);
-                  }
+                      bank.getAllAccounts()
+                              .forEach(acc -> System.out.println(acc));
                     break;
               case 3:
                   System.out.print("Enter account number: ");
@@ -68,13 +68,19 @@ public class Main {
                   Account newAmount = bank.withdraw(accountNumber3, amount3);
                   System.out.println(newAmount);
                   break;
+              case 7:
+                 bank.getAllAccounts()
+                         .stream()
+                         .filter(acc -> acc.getBalance() > 5000)
+                         .forEach(acc -> System.out.println(acc));
               default:
                   System.out.println("Invalid choice");
                   break;
             }
-        }while (choice != 7);
+        }while (choice != 8);
 
             System.out.println("Goodbye.");
+
 
 
     }
