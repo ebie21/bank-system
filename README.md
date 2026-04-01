@@ -8,7 +8,7 @@ a simple Java Program simulating basic Bannking System
 - Custom exception handling
 - Save and load accounts from a file
 - Filter accounts using Java Streams
-- 
+  
 ## Concepts Covered
 - Object-Oriented Programming (Encapsulation, Inheritance, Interfaces)
 - Exception Handling
